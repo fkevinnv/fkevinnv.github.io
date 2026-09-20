@@ -1,179 +1,454 @@
+:root {
+    --bg: #f7f9fc;
+    --surface: #ffffff;
+    --surface-raised: #f4f7fb;
+    --border: #dfe4ec;
+    --text: #182234;
+    --text-muted: #57606f;
+    --accent: #1e4e79;
+    --accent-soft: rgba(30, 78, 121, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-  background-color: #11161c;
-  color: #dcdcdc;
-  font-family: 'Segoe UI', sans-serif;
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
 }
 
-header {
-  text-align: center;
-  margin-top: 50px;
+h1, h2, h3 {
+    font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    margin: 0;
 }
 
-h1 {
-  color: #5aa0ff;
-  font-size: 2.5em;
+a {
+    color: var(--accent);
+    text-decoration: none;
 }
 
-.proyectos {
-  margin: 80px;
+a:hover {
+    text-decoration: underline;
 }
 
-.proyectos h2 {
-  color: #5aa0ff;
-  border-left: 4px solid #5aa0ff;
-  padding-left: 10px;
+img {
+    max-width: 100%;
+    display: block;
 }
 
-.proyectos a {
-  color: #5aa0ff;
-  text-decoration: none;
-  display: block;
-  margin: 5px 0;
+/* Header */
+
+.site-header {
+    border-bottom: 1px solid var(--border);
+    padding: 64px 24px 56px;
 }
 
-.proyectos a:hover {
-  color: #9bcfff;
-  text-decoration: underline;
+.header-inner {
+    max-width: 760px;
+    margin: 0 auto;
 }
 
-/* 🔹 Cuadro "Sobre mí" con brillo y alineado con el carrusel */
-.sobre-mi {
-  margin: 20px auto 40px 10%; /* alineado con el carrusel, margen izquierdo igual */
-  background: #1b222c;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 0 20px #5aa0ff55;
-  line-height: 1.6;
-  max-width: 700px; /* sigue siendo más estrecho que el carrusel */
-  position: relative;
-  overflow: hidden;
+.eyebrow {
+    color: var(--accent);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    margin: 0 0 10px;
 }
 
-/* Efecto de borde brillante animado */
-.sobre-mi::before {
-  content: "";
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  border-radius: 12px;
-  background: linear-gradient(120deg, #5aa0ff, #4de0ff, #5aa0ff);
-  z-index: -1;
-  background-size: 300% 300%;
-  animation: brillo 6s linear infinite;
-  filter: blur(5px);
-  opacity: 0.5;
+.site-header h1 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 16px;
 }
 
-@keyframes brillo {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+.site-header h1 .accent {
+    color: var(--accent);
 }
 
-.sobre-mi h2 {
-  color: #5aa0ff;
-  margin-top: 0;
+.tagline {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    max-width: 620px;
+    margin: 0 0 28px;
 }
 
-/* 🔹 Carrusel */
-.carrusel {
-  text-align: center;
-  margin: 80px 0;
+.header-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
 }
 
-.carousel-container {
-  width: 80%; /* el carrusel ocupa más ancho */
-  margin-left: 10%; /* igual que el sobre-mi para alinear */
-  overflow: hidden;
-  border-radius: 15px;
-  box-shadow: 0 0 20px #5aa0ff66;
+/* Buttons */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.92rem;
+    border: 1px solid transparent;
 }
+
+.btn:hover {
+    text-decoration: none;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background: #15395a;
+}
+
+.btn-ghost {
+    background: transparent;
+    border-color: var(--border);
+    color: var(--text);
+}
+
+.btn-ghost:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.btn-block {
+    width: 100%;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+/* Layout */
+
+.layout {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 48px 24px 64px;
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+}
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.sidebar {
+    width: 280px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 32px;
+}
+
+/* Panels */
+
+.panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 28px 30px;
+    box-shadow: 0 1px 2px rgba(24, 34, 52, 0.04);
+}
+
+.panel h2 {
+    font-size: 1.35rem;
+    margin-bottom: 18px;
+}
+
+.panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.panel-header h2 {
+    margin-bottom: 0;
+}
+
+.panel p {
+    color: var(--text-muted);
+}
+
+/* Skills */
+
+.skills {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.skill-group h3 {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 10px;
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    padding: 5px 12px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 0.84rem;
+}
+
+.tag.small {
+    font-size: 0.78rem;
+    padding: 4px 10px;
+}
+
+/* Featured projects */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.project-card {
+    background: var(--surface-raised);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 22px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.project-card-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+.project-card h3 {
+    font-size: 1.1rem;
+}
+
+.project-card p {
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    margin: 0;
+    flex: 1;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text);
+    margin-top: 4px;
+}
+
+.project-link:hover {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+/* Carousel (prácticas de clase) */
 
 .carousel {
-  display: flex;
-  animation: scroll 15s linear infinite;
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 6px;
+    scrollbar-width: thin;
+}
+
+.carousel-nav {
+    display: flex;
+    gap: 8px;
+}
+
+.carousel-nav button {
+    width: 34px;
+    height: 34px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text);
+    cursor: pointer;
+}
+
+.carousel-nav button:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.slide {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 260px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--surface-raised);
 }
 
 .slide img {
-  width: 400px;
-  height: 250px;
-  object-fit: cover;
-  transition: transform 0.5s ease;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    background: var(--surface-raised);
 }
 
-.slide img:hover {
-  transform: scale(1.05);
+.slide-label {
+    padding: 12px 14px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-@keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+/* Academic repos */
+
+.repo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
 }
 
-/* 🔹 Menú lateral derecho */
-.menu-derecho {
-  position: fixed;
-  top: 100px;
-  right: 20px;
-  background: #1b222c;
-  padding: 15px;
-  border-radius: 12px;
-  box-shadow: 0 0 15px #5aa0ff55;
+.repo-card {
+    display: block;
+    padding: 18px 20px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--surface-raised);
 }
 
-.menu-derecho h3 {
-  color: #5aa0ff;
-  text-align: center;
+.repo-card:hover {
+    border-color: var(--accent);
+    text-decoration: none;
 }
 
-.menu-derecho ul {
-  list-style: none;
-  padding: 0;
+.repo-card-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 6px;
 }
 
-.menu-derecho li {
-  margin: 10px 0;
+.repo-card h3 {
+    font-size: 1rem;
+    color: var(--text);
 }
 
-.menu-derecho a {
-  color: #9bcfff;
-  text-decoration: none;
-  font-weight: bold;
+.repo-card p {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin: 0;
 }
 
-.menu-derecho a:hover {
-  color: #ffffff;
+/* Contact sidebar */
+
+.contact-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-/* 🔹 Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #0d1117;
-  color: #5aa0ff;
-  margin-top: 50px;
+.contact-list a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    color: var(--text);
 }
 
-/* 🔹 Adaptación responsive */
-@media (max-width: 1000px) {
-  .sobre-mi {
-    margin: 20px;
-    max-width: 100%;
-  }
+.contact-list a:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    text-decoration: none;
+}
 
-  .carousel-container {
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  .menu-derecho {
-    position: static;
-    margin: 20px auto;
+.contact-list i {
+    width: 18px;
     text-align: center;
-    width: fit-content;
-  }
+    color: var(--accent);
+}
+
+.contact-label {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-label .kind {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+}
+
+.contact-label .value {
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+/* Footer */
+
+footer {
+    border-top: 1px solid var(--border);
+    padding: 24px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+/* Responsive */
+
+@media (max-width: 860px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: static;
+    }
+
+    .project-grid,
+    .repo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .site-header h1 {
+        font-size: 2.1rem;
+    }
 }

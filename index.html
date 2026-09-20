@@ -3,352 +3,264 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kevin Vivas | Desarrollador Multiplataforma</title>
-  <meta name="description" content="Portafolio profesional de Kevin Vivas, estudiante de Desarrollo de Aplicaciones Multiplataforma. Proyectos, habilidades y contacto.">
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.ico">   
-  
-  <!-- Fonts & Icons -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Kevin Vivas Alvites — Portafolio</title>
+  <meta name="description" content="Portafolio de Kevin Vivas Alvites, Técnico en Sistemas Microinformáticos y Redes & Desarrollador de Aplicaciones Multiplataforma. Proyectos, habilidades y contacto.">
+
+  <link rel="icon" type="image/png" href="favicon.ico">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-  
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            'inter': ['Inter', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
-  
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #0f172a; /* Slate 900 */
-      color: #e2e8f0; /* Slate 200 */
-    }
-    
-    /* Scrollbar personalizada */
-    ::-webkit-scrollbar { width: 8px; height: 8px; }
-    ::-webkit-scrollbar-track { background: #1e293b; }
-    ::-webkit-scrollbar-thumb { background: #475569; border-radius: 4px; }
-    ::-webkit-scrollbar-thumb:hover { background: #6366f1; }
-
-    /* Carrusel estilo scroll-snap */
-    .carousel-container {
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none; /* Firefox */
-    }
-    .carousel-container::-webkit-scrollbar { display: none; }
-    
-    .slide {
-      scroll-snap-align: center;
-      flex-shrink: 0;
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="min-h-screen flex flex-col">
+<body>
 
-  <!-- Header / Hero Section -->
-  <header class="relative bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 py-20 px-6 text-center border-b border-slate-800 overflow-hidden">
-    <!-- Decorative background blobs -->
-    <div class="absolute top-0 left-1/4 w-72 h-72 bg-indigo-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
-    <div class="absolute bottom-0 right-1/4 w-72 h-72 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
-    
-    <div class="relative z-10 max-w-4xl mx-auto">
-      <div class="mb-6 inline-block p-3 bg-indigo-500/10 rounded-full border border-indigo-500/30">
-        <i class="fas fa-laptop-code text-4xl text-indigo-400"></i>
-      </div>
-      <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-4 tracking-tight">
-        Hola, soy <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">Kevin Vivas</span>
-      </h1>
-      <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto">
-        Estudiante de <span class="text-white font-semibold">Desarrollo de Aplicaciones Multiplataforma</span> & Técnico en Sistemas microinformáticos y redes.
+  <header class="site-header">
+    <div class="header-inner">
+      <p class="eyebrow">Portafolio</p>
+      <h1>Kevin Vivas <span class="accent">Alvites</span></h1>
+      <p class="tagline">
+        Técnico en Sistemas Microinformáticos y Redes (SMR), completando el Grado Superior en
+        Desarrollo de Aplicaciones Multiplataforma (DAM).
       </p>
-      
-      <!-- Action Buttons -->
-      <div class="mt-8 flex justify-center gap-4 flex-wrap">
-        <a href="#proyectos" class="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-medium transition-all shadow-lg shadow-indigo-500/30 hover:scale-105">
-          <i class="fas fa-rocket mr-2"></i> Ver Proyectos
-        </a>
-        <a href="#contacto" class="px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white rounded-lg font-medium border border-slate-700 transition-all hover:scale-105">
-          <i class="fas fa-envelope mr-2"></i> Contactar
-        </a>
+      <div class="header-actions">
+        <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
+        <a href="#contacto" class="btn btn-ghost">Contactar</a>
       </div>
     </div>
   </header>
 
-  <!-- Main Layout -->
-  <div class="flex-1 container mx-auto px-4 py-12">
-    <div class="flex flex-col lg:flex-row gap-8">
-      
-      <!-- Main Content -->
-      <main class="flex-1 space-y-12">
-        
-        <!-- About Me -->
-        <section id="sobre-mi" class="bg-slate-800/50 border border-slate-700 rounded-2xl p-8 backdrop-blur-sm">
-          <div class="flex items-center gap-3 mb-6">
-            <i class="fas fa-user-astronaut text-2xl text-indigo-400"></i>
-            <h2 class="text-2xl font-bold text-white">Sobre Mí</h2>
-          </div>
-          <div class="space-y-4 text-slate-300 leading-relaxed">
-            <p>
-              Soy un apasionado de la informática y el desarrollo de software. Me encanta resolver problemas, crear soluciones innovadoras y aprender nuevas tecnologías constantemente.
-            </p>
-            <p>
-              En mi tiempo libre aprendo nuevas tecnologías para ampliar más mis habilidades.
-            </p>
-            <div class="pt-4 border-t border-slate-700">
-              <h3 class="text-sm font-semibold text-indigo-300 uppercase tracking-wider mb-3">Habilidades Técnicas</h3>
-              <div class="flex flex-wrap gap-2">
-                <!-- Backend -->
-                <span class="px-3 py-1 bg-slate-900 text-indigo-300 rounded-full text-sm border border-indigo-500/30">Java</span>
-                <span class="px-3 py-1 bg-slate-900 text-purple-300 rounded-full text-sm border border-purple-500/30">PHP</span>
-                <span class="px-3 py-1 bg-slate-900 text-sky-300 rounded-full text-sm border border-sky-500/30">Python</span>
-                
-                <!-- Frontend -->
-                <span class="px-3 py-1 bg-slate-900 text-red-300 rounded-full text-sm border border-red-500/30">Angular</span>
-                <span class="px-3 py-1 bg-slate-900 text-cyan-300 rounded-full text-sm border border-cyan-500/30">HTML/CSS</span>
-                <span class="px-3 py-1 bg-slate-900 text-yellow-300 rounded-full text-sm border border-yellow-500/30">JavaScript</span>
-                
-                <!-- DB & Systems -->
-                <span class="px-3 py-1 bg-slate-900 text-blue-300 rounded-full text-sm border border-blue-500/30">SQL</span>
-                <span class="px-3 py-1 bg-slate-900 text-green-300 rounded-full text-sm border border-green-500/30">Sistemas Operativos</span>
-              </div>
+  <div class="layout">
+    <main class="main-content">
+
+      <!-- Sobre mí -->
+      <section id="sobre-mi" class="panel">
+        <h2>Sobre mí</h2>
+        <p>
+          Combino la formación técnica en redes y sistemas microinformáticos con el desarrollo de
+          aplicaciones que estoy cursando actualmente en el Grado Superior de DAM. Me interesan los
+          puestos de soporte técnico y helpdesk, donde puedo aportar tanto el diagnóstico y
+          mantenimiento de sistemas como la programación de herramientas para agilizar el trabajo
+          del día a día.
+        </p>
+
+        <div class="skills">
+          <div class="skill-group">
+            <h3>Sistemas y redes</h3>
+            <div class="tag-list">
+              <span class="tag">Redes</span>
+              <span class="tag">Sistemas operativos</span>
+              <span class="tag">PowerShell</span>
             </div>
           </div>
-        </section>
-
-        <!-- GitHub Repos -->
-        <section id="proyectos" class="bg-slate-800/50 border border-slate-700 rounded-2xl p-8">
-          <div class="flex items-center gap-3 mb-6">
-            <i class="fab fa-github text-2xl text-white"></i>
-            <h2 class="text-2xl font-bold text-white">Repositorios Académicos</h2>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <!-- Repo Card 1 -->
-            <a href="https://github.com/kev312/programacion" target="_blank" class="group block p-6 bg-slate-900 rounded-xl border border-slate-700 hover:border-indigo-500 transition-all hover:shadow-lg hover:shadow-indigo-500/10">
-              <div class="flex justify-between items-start mb-3">
-                <h3 class="text-lg font-bold text-white group-hover:text-indigo-400 transition-colors">Programación</h3>
-                <i class="fas fa-external-link-alt text-slate-600 group-hover:text-indigo-400 text-sm"></i>
-              </div>
-              <p class="text-slate-400 text-sm">Ejercicios y proyectos del módulo de programación.</p>
-              <div class="mt-4 flex items-center text-xs text-slate-500">
-                <span class="w-3 h-3 rounded-full bg-orange-500 mr-2"></span> Java
-              </div>
-            </a>
-            <!-- Repo Card 2 -->
-            <a href="https://github.com/kev312/lenguajemarcas" target="_blank" class="group block p-6 bg-slate-900 rounded-xl border border-slate-700 hover:border-indigo-500 transition-all hover:shadow-lg hover:shadow-indigo-500/10">
-              <div class="flex justify-between items-start mb-3">
-                <h3 class="text-lg font-bold text-white group-hover:text-indigo-400 transition-colors">Lenguaje de Marcas</h3>
-                <i class="fas fa-external-link-alt text-slate-600 group-hover:text-indigo-400 text-sm"></i>
-              </div>
-              <p class="text-slate-400 text-sm">Prácticas de XML, HTML, CSS y más.</p>
-              <div class="mt-4 flex items-center text-xs text-slate-500">
-                <span class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></span> HTML / CSS
-              </div>
-            </a>
-            <!--Repo 3-->
-             <a href="https://github.com/kev312/BasesdeDatos" target="_blank" class="group block p-6 bg-slate-900 rounded-xl border border-slate-700 hover:border-indigo-500 transition-all hover:shadow-lg hover:shadow-indigo-500/10">
-              <div class="flex justify-between items-start mb-3">
-                <h3 class="text-lg font-bold text-white group-hover:text-indigo-400 transition-colors">Bases de datos</h3>
-                <i class="fas fa-external-link-alt text-slate-600 group-hover:text-indigo-400 text-sm"></i>
-              </div>
-              <p class="text-slate-400 text-sm">Ejercicios y proyectos del módulo de bases de datos.</p>
-              <div class="mt-4 flex items-center text-xs text-slate-500">
-                <span class="w-3 h-3 rounded-full bg-blue-500 mr-2"></span> SQL
-              </div>
-            </a>
-            <!--REPO 4-->
-              <a href="https://github.com/kev312/powershell" target="_blank" class="group block p-6 bg-slate-900 rounded-xl border border-slate-700 hover:border-indigo-500 transition-all hover:shadow-lg hover:shadow-indigo-500/10">
-              <div class="flex justify-between items-start mb-3">
-                <h3 class="text-lg font-bold text-white group-hover:text-indigo-400 transition-colors">PowerShell ISE</h3>
-                <i class="fas fa-external-link-alt text-slate-600 group-hover:text-indigo-400 text-sm"></i>
-              </div>
-              <p class="text-slate-400 text-sm">Programas en Windows PowerShell.</p>
-              <div class="mt-4 flex items-center text-xs text-slate-500">
-                <span class="w-3 h-3 rounded-full bg-red-500 mr-2"></span> PowerShell ISE
-              </div>
-            </a>
-          </div>
-        </section>
-
-        <!-- Carousel Projects -->
-        <section class="bg-slate-800/50 border border-slate-700 rounded-2xl p-8">
-          <div class="flex items-center justify-between mb-6">
-            <div class="flex items-center gap-3">
-              <i class="fas fa-images text-2xl text-indigo-400"></i>
-              <h2 class="text-2xl font-bold text-white">Proyectos Personales</h2>
+          <div class="skill-group">
+            <h3>Desarrollo</h3>
+            <div class="tag-list">
+              <span class="tag">Python</span>
+              <span class="tag">Java</span>
+              <span class="tag">PHP</span>
+              <span class="tag">Angular</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">HTML / CSS</span>
+              <span class="tag">SQL</span>
             </div>
-            <!-- Carousel Navigation -->
-            <div class="flex gap-2">
-              <button id="prevBtn" class="p-2 bg-slate-700 hover:bg-indigo-600 rounded-full transition-colors text-white">
-                <i class="fas fa-chevron-left"></i>
-              </button>
-              <button id="nextBtn" class="p-2 bg-slate-700 hover:bg-indigo-600 rounded-full transition-colors text-white">
-                <i class="fas fa-chevron-right"></i>
-              </button>
-            </div>
-          </div>
-          
-          <!-- Carousel Container -->
-          <div id="carousel" class="carousel-container flex overflow-x-auto gap-6 pb-4 scroll-smooth">
-            
-             <!--Slide Gimnasio -->
-             <div class="slide w-72 h-44 rounded-xl overflow-hidden relative group flex-shrink-0 border border-slate-700 shadow-lg">
-              <img src="img/gym.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 bg-slate-900" alt="Aplicaciión de gimnasio">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent flex items-end p-4">
-                <a href="https://gym-xi-plum.vercel.app/" target="_blank" class="text-white font-bold hover:text-indigo-300 transition-colors">
-                  <i class="fas fa-link mr-2"></i> Gimnasio App
-                </a>
-              </div>
-            </div>
-            
-               <!-- Slide catalogo -->
-            <div class="slide w-72 h-44 rounded-xl overflow-hidden relative group flex-shrink-0 border border-slate-700 shadow-lg">
-              <img src="img/logo.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 bg-slate-900" alt="Tienda Blond">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent flex items-end p-4">
-                <a href="https://tienda-blond-seven.vercel.app/" target="_blank" class="text-white font-bold hover:text-indigo-300 transition-colors">
-                  <i class="fas fa-link mr-2"></i> Catalogo - Tienda 
-                </a>
-              </div>
-            </div>
-                 <!--Slide Calendario -->
-             <div class="slide w-72 h-44 rounded-xl overflow-hidden relative group flex-shrink-0 border border-slate-700 shadow-lg">
-              <img src="img/calendario.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 bg-slate-900" alt="Aplicaciión de calendario">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent flex items-end p-4">
-                <a href="https://calendario-eight-sigma.vercel.app/" target="_blank" class="text-white font-bold hover:text-indigo-300 transition-colors">
-                  <i class="fas fa-link mr-2"></i> Calendario App
-                </a>
-              </div>
-            </div>
-               <!-- Slide Ruleta -->
-            <div class="slide w-72 h-44 rounded-xl overflow-hidden relative group flex-shrink-0 border border-slate-700 shadow-lg">
-              <img src="img/rule.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 bg-slate-900" alt="Ruleta">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent flex items-end p-4">
-                <a href="https://ruleta-kappa.vercel.app/" target="_blank" class="text-white font-bold hover:text-indigo-300 transition-colors">
-                  <i class="fas fa-link mr-2"></i> Ruleta Aleatoria App
-                </a>
-              </div>
-            </div>
-              <!-- Slide Obtaculos -->
-            <div class="slide w-72 h-44 rounded-xl overflow-hidden relative group flex-shrink-0 border border-slate-700 shadow-lg">
-              <img src="img/bolas.jpg" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Proyecto Decadencia">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent flex items-end p-4">
-                <a href="https://decadencia-juego.vercel.app/" target="_blank" class="text-white font-bold hover:text-indigo-300 transition-colors">
-                  <i class="fas fa-link mr-2"></i> Esquiva Obstaculos App
-                </a>
-              </div>
-            </div>
-            
-            <!-- Slide 1 -->
-            <div class="slide w-72 h-44 rounded-xl overflow-hidden relative group flex-shrink-0 border border-slate-700 shadow-lg">
-              <img src="img/starwars.jpg" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Proyecto Star Wars">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent flex items-end p-4">
-                <a href="https://starwars-kevinv.vercel.app/" target="_blank" class="text-white font-bold hover:text-indigo-300 transition-colors">
-                  <i class="fas fa-link mr-2"></i> Star Wars Web
-                </a>
-              </div>
-            </div>
-
-            <!-- Slide 2 -->
-            <div class="slide w-72 h-44 rounded-xl overflow-hidden relative group flex-shrink-0 border border-slate-700 shadow-lg">
-              <img src="img/dbz.jpg" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Proyecto DBZ">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent flex items-end p-4">
-                <a href="https://project-kevinv.vercel.app/" target="_blank" class="text-white font-bold hover:text-indigo-300 transition-colors">
-                  <i class="fas fa-link mr-2"></i> DBZ Project
-                </a>
-              </div>
-            </div>
-            <!-- Slide 5 -->
-            <div class="slide w-72 h-44 rounded-xl overflow-hidden relative group flex-shrink-0 border border-slate-700 shadow-lg">
-              <img src="img/snake.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 bg-slate-900" alt="Juego Snake">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent flex items-end p-4">
-                <a href="https://kevinv-project-snake.vercel.app/" target="_blank" class="text-white font-bold hover:text-indigo-300 transition-colors">
-                  <i class="fas fa-link mr-2"></i> Snake App
-                </a>
-              </div>
-            </div>
-
-         
-
-           
-          </div>
-        </section>
-
-      </main>
-
-      <!-- Sidebar (Contact) -->
-      <aside id="contacto" class="w-full lg:w-80 flex-shrink-0">
-        <div class="sticky top-8 space-y-6">
-          <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-6">
-            <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
-              <i class="fas fa-paper-plane text-indigo-400"></i> Contacto
-            </h3>
-            <ul class="space-y-4">
-              <li>
-                <a href="mailto:vivask69@gmail.com" class="flex items-center gap-4 p-3 bg-slate-900 rounded-lg hover:bg-indigo-600 transition-colors group">
-                  <span class="w-10 h-10 bg-slate-700 group-hover:bg-indigo-500 rounded-full flex items-center justify-center transition-colors">
-                    <i class="fas fa-envelope text-white"></i>
-                  </span>
-                  <div>
-                    <span class="text-xs text-slate-400 block">Email</span>
-                    <span class="text-white font-medium text-sm">Escríbeme</span>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="https://linkedin.com/in/kevin-vivas-alvites-b88b6927b" target="_blank" class="flex items-center gap-4 p-3 bg-slate-900 rounded-lg hover:bg-blue-600 transition-colors group">
-                  <span class="w-10 h-10 bg-slate-700 group-hover:bg-blue-500 rounded-full flex items-center justify-center transition-colors">
-                    <i class="fab fa-linkedin-in text-white"></i>
-                  </span>
-                  <div>
-                    <span class="text-xs text-slate-400 block">LinkedIn</span>
-                    <span class="text-white font-medium text-sm">Conectemos</span>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/fkevinnv" target="_blank" class="flex items-center gap-4 p-3 bg-slate-900 rounded-lg hover:bg-slate-600 transition-colors group">
-                  <span class="w-10 h-10 bg-slate-700 group-hover:bg-slate-800 rounded-full flex items-center justify-center transition-colors">
-                    <i class="fab fa-github text-white"></i>
-                  </span>
-                  <div>
-                    <span class="text-xs text-slate-400 block">GitHub</span>
-                    <span class="text-white font-medium text-sm">fkevinnv</span>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
-          
-          <!-- Small CV Download or extra info could go here -->
-          <div class="text-center text-xs text-slate-500 hidden lg:block">
           </div>
         </div>
-      </aside>
-    </div>
+      </section>
+
+      <!-- Proyectos destacados -->
+      <section id="proyectos" class="panel">
+        <h2>Proyectos destacados</h2>
+        <div class="project-grid">
+
+          <article class="project-card">
+            <div class="project-card-icon"><i class="fas fa-headset"></i></div>
+            <h3>Soporte IT Manager</h3>
+            <p>
+              Aplicación web para gestionar tickets de soporte e inventario de equipos: seguimiento
+              de incidencias por estado y prioridad, control de equipos asignados, panel de
+              indicadores e informes.
+            </p>
+            <div class="tag-list small">
+              <span class="tag small">Python</span>
+              <span class="tag small">Flask</span>
+              <span class="tag small">SQLite</span>
+              <span class="tag small">pytest</span>
+            </div>
+            <a href="https://github.com/fkevinnv/soporte-it-manager" target="_blank" class="project-link">
+              <i class="fab fa-github"></i> Ver en GitHub
+            </a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card-icon"><i class="fas fa-network-wired"></i></div>
+            <h3>net-watch</h3>
+            <p>
+              Herramienta de línea de comandos que escanea una red local, detecta los dispositivos
+              conectados y guarda un histórico para avisar de cambios: equipos nuevos, que dejan de
+              responder, o con puertos distintos abiertos.
+            </p>
+            <div class="tag-list small">
+              <span class="tag small">Python</span>
+              <span class="tag small">SQLite</span>
+              <span class="tag small">pytest</span>
+            </div>
+            <a href="https://github.com/fkevinnv/net-watch" target="_blank" class="project-link">
+              <i class="fab fa-github"></i> Ver en GitHub
+            </a>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Prácticas de clase -->
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Prácticas y proyectos de clase</h2>
+          <div class="carousel-nav">
+            <button id="prevBtn" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+            <button id="nextBtn" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+          </div>
+        </div>
+
+        <div id="carousel" class="carousel">
+          <div class="slide">
+            <img src="img/gym.png" alt="Aplicación de gimnasio">
+            <a class="slide-label" href="https://gym-xi-plum.vercel.app/" target="_blank">
+              <i class="fas fa-link"></i> Gimnasio App
+            </a>
+          </div>
+          <div class="slide">
+            <img src="img/logo.png" alt="Tienda Blond">
+            <a class="slide-label" href="https://tienda-blond-seven.vercel.app/" target="_blank">
+              <i class="fas fa-link"></i> Catálogo - Tienda
+            </a>
+          </div>
+          <div class="slide">
+            <img src="img/calendario.png" alt="Aplicación de calendario">
+            <a class="slide-label" href="https://calendario-eight-sigma.vercel.app/" target="_blank">
+              <i class="fas fa-link"></i> Calendario App
+            </a>
+          </div>
+          <div class="slide">
+            <img src="img/rule.png" alt="Ruleta">
+            <a class="slide-label" href="https://ruleta-kappa.vercel.app/" target="_blank">
+              <i class="fas fa-link"></i> Ruleta Aleatoria App
+            </a>
+          </div>
+          <div class="slide">
+            <img src="img/bolas.jpg" alt="Proyecto Decadencia">
+            <a class="slide-label" href="https://decadencia-juego.vercel.app/" target="_blank">
+              <i class="fas fa-link"></i> Esquiva Obstáculos App
+            </a>
+          </div>
+          <div class="slide">
+            <img src="img/starwars.jpg" alt="Proyecto Star Wars">
+            <a class="slide-label" href="https://starwars-kevinv.vercel.app/" target="_blank">
+              <i class="fas fa-link"></i> Star Wars Web
+            </a>
+          </div>
+          <div class="slide">
+            <img src="img/dbz.jpg" alt="Proyecto DBZ">
+            <a class="slide-label" href="https://project-kevinv.vercel.app/" target="_blank">
+              <i class="fas fa-link"></i> DBZ Project
+            </a>
+          </div>
+          <div class="slide">
+            <img src="img/snake.png" alt="Juego Snake">
+            <a class="slide-label" href="https://kevinv-project-snake.vercel.app/" target="_blank">
+              <i class="fas fa-link"></i> Snake App
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Repositorios académicos -->
+      <section class="panel">
+        <h2>Repositorios académicos</h2>
+        <div class="repo-grid">
+          <a href="https://github.com/fkevinnv/programacion" target="_blank" class="repo-card">
+            <div class="repo-card-title">
+              <h3>Programación</h3>
+              <i class="fas fa-external-link-alt"></i>
+            </div>
+            <p>Ejercicios y proyectos del módulo de programación (Java).</p>
+          </a>
+          <a href="https://github.com/fkevinnv/lenguajemarcas" target="_blank" class="repo-card">
+            <div class="repo-card-title">
+              <h3>Lenguaje de marcas</h3>
+              <i class="fas fa-external-link-alt"></i>
+            </div>
+            <p>Prácticas de XML, HTML, CSS y más.</p>
+          </a>
+          <a href="https://github.com/fkevinnv/BasesdeDatos" target="_blank" class="repo-card">
+            <div class="repo-card-title">
+              <h3>Bases de datos</h3>
+              <i class="fas fa-external-link-alt"></i>
+            </div>
+            <p>Ejercicios y proyectos del módulo de bases de datos (SQL).</p>
+          </a>
+          <a href="https://github.com/fkevinnv/powershell" target="_blank" class="repo-card">
+            <div class="repo-card-title">
+              <h3>PowerShell ISE</h3>
+              <i class="fas fa-external-link-alt"></i>
+            </div>
+            <p>Programas en Windows PowerShell.</p>
+          </a>
+        </div>
+      </section>
+
+    </main>
+
+    <aside id="contacto" class="sidebar">
+      <div class="panel">
+        <h2>Contacto</h2>
+        <ul class="contact-list">
+          <li>
+            <a href="mailto:vivask69@gmail.com">
+              <i class="fas fa-envelope"></i>
+              <span class="contact-label">
+                <span class="kind">Email</span>
+                <span class="value">Escríbeme</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/kevin-vivas-alvites-b88b6927b" target="_blank">
+              <i class="fab fa-linkedin-in"></i>
+              <span class="contact-label">
+                <span class="kind">LinkedIn</span>
+                <span class="value">Conectemos</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/fkevinnv" target="_blank">
+              <i class="fab fa-github"></i>
+              <span class="contact-label">
+                <span class="kind">GitHub</span>
+                <span class="value">fkevinnv</span>
+              </span>
+            </a>
+          </li>
+        </ul>
+        <a href="CV-Kevin-Vivas-Alvites.pdf" download class="btn btn-primary btn-block">
+          <i class="fas fa-file-arrow-down"></i> Descargar CV
+        </a>
+      </div>
+    </aside>
   </div>
 
-  <!-- Footer -->
-  <footer class="border-t border-slate-800 bg-slate-900/50 py-6 mt-12">
-    <div class="container mx-auto px-4 text-center text-slate-500 text-sm">
-      <p>© 2026 Kevin Vivas | Todos los derechos reservados</p>
-    </div>
+  <footer>
+    <p>© 2026 Kevin Vivas Alvites</p>
   </footer>
 
-  <!-- Minimal Script for Carousel -->
   <script>
     const carousel = document.getElementById('carousel');
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
-    const scrollAmount = 300; // Width of card + gap
+    const scrollAmount = 280;
 
     prevBtn.addEventListener('click', () => {
       carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
