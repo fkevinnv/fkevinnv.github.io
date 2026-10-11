@@ -239,6 +239,10 @@ img {
     gap: 12px;
 }
 
+.project-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+}
+
 .project-card-icon {
     width: 40px;
     height: 40px;
